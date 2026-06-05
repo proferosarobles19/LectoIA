@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,15 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts para un look infantil y legible -->
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600;700&display=swap"
+    rel="stylesheet">
   <!-- FontAwesome para íconos infantiles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <!-- Estilos Personalizados y Animaciones -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body class="text-slate-800 pb-16">
 
   <header class="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 text-white shadow-lg no-print relative z-50">
@@ -24,16 +27,19 @@
         </div>
         <div>
           <h1 class="text-2xl font-kids tracking-wider">Aventuras Lectoras</h1>
-          <p class="text-xs font-semibold opacity-90">Juego Interactivo para niños • Realizado por la Profesora Rosa Robles Pino</p>
+          <p class="text-xs font-semibold opacity-90">Juego Interactivo para niños • Realizado por la Profesora Rosa
+            Robles Pino</p>
         </div>
       </div>
-      
+
       <!-- Selector de Modo de Trabajo -->
       <div class="bg-white/20 p-1.5 rounded-2xl flex gap-1 backdrop-blur-sm">
-        <button id="btn-tab-game" onclick="switchTab('game')" class="px-5 py-2 rounded-xl text-sm font-bold transition-all duration-300 bg-white text-blue-600 shadow-md">
+        <button id="btn-tab-game" onclick="switchTab('game')"
+          class="px-5 py-2 rounded-xl text-sm font-bold transition-all duration-300 bg-white text-blue-600 shadow-md">
           🎮 ¡Jugar el Simulador!
         </button>
-        <button id="btn-tab-ficha" onclick="switchTab('ficha')" class="px-5 py-2 rounded-xl text-sm font-bold transition-all duration-300 hover:bg-white/10 text-white">
+        <button id="btn-tab-ficha" onclick="switchTab('ficha')"
+          class="px-5 py-2 rounded-xl text-sm font-bold transition-all duration-300 hover:bg-white/10 text-white">
           📝 Ficha de Codiseño
         </button>
       </div>
@@ -41,53 +47,78 @@
   </header>
 
   <!-- Hero Section con Paisaje y Selección de Niveles -->
-  <section class="relative w-full h-[400px] md:h-[500px] overflow-hidden no-print flex flex-col justify-center items-center bg-sky-200 shadow-lg mb-8">
+  <section
+    class="relative w-full h-[400px] md:h-[500px] overflow-hidden no-print flex flex-col justify-center items-center bg-sky-200 shadow-lg mb-8">
     <!-- Imagen de fondo generada -->
     <img src="img/bg.png" alt="Paisaje" class="absolute inset-0 w-full h-full object-cover z-0 object-bottom">
-    
+
     <!-- Contenido del Hero -->
-    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center h-full gap-8 md:gap-12 pt-8">
-      
+    <div
+      class="relative z-10 w-full max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center h-full gap-8 md:gap-12 pt-8">
+
       <!-- Insignia Izquierda -->
-      <div class="hidden md:block transform -rotate-6 bg-yellow-400 border-4 border-white rounded-3xl p-4 shadow-xl text-center max-w-[220px] animate-bounce-slow mt-8">
+      <div
+        class="hidden md:block transform -rotate-6 bg-yellow-400 border-4 border-white rounded-3xl p-4 shadow-xl text-center max-w-[220px] animate-bounce-slow mt-8">
         <h2 class="text-white font-extrabold text-3xl leading-tight drop-shadow-md font-kids uppercase">
-          Aventuras <span class="text-amber-500 bg-white px-2 py-1 rounded-full text-xl inline-block mt-2 shadow-sm">Lectoras</span>
+          Aventuras <span
+            class="text-amber-500 bg-white px-2 py-1 rounded-full text-xl inline-block mt-2 shadow-sm">Lectoras</span>
         </h2>
       </div>
 
       <!-- Botones Circulares de Niveles -->
       <div class="flex gap-4 md:gap-8 items-end justify-center flex-wrap pb-4">
-        
+
         <!-- Nivel Fácil -->
-        <button onclick="selectLevel('easy'); document.getElementById('section-game').scrollIntoView({behavior: 'smooth'})" class="group relative flex flex-col items-center">
-          <div class="w-32 h-32 md:w-44 md:h-44 rounded-full border-[6px] md:border-8 border-white bg-emerald-400 shadow-[0_10px_20px_rgba(0,0,0,0.3)] flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-4">
+        <button
+          onclick="selectLevel('easy'); document.getElementById('section-game').scrollIntoView({behavior: 'smooth'})"
+          class="group relative flex flex-col items-center">
+          <div
+            class="w-32 h-32 md:w-44 md:h-44 rounded-full border-[6px] md:border-8 border-white bg-emerald-400 shadow-[0_10px_20px_rgba(0,0,0,0.3)] flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-4">
             <img src="img/turtle.png" alt="Tortuga" class="w-full h-full object-cover group-hover:animate-wobble">
           </div>
-          <div class="absolute -bottom-4 md:-bottom-6 bg-white border-4 border-emerald-400 rounded-full px-4 py-1 text-center shadow-lg">
-            <span class="block text-emerald-600 font-extrabold text-[11px] md:text-sm font-kids uppercase tracking-wider">Nivel Fácil</span>
-            <span class="block text-white bg-emerald-400 rounded-full text-[9px] md:text-[11px] font-bold px-2 mt-0.5 shadow-inner">Tortuga</span>
+          <div
+            class="absolute -bottom-4 md:-bottom-6 bg-white border-4 border-emerald-400 rounded-full px-4 py-1 text-center shadow-lg">
+            <span
+              class="block text-emerald-600 font-extrabold text-[11px] md:text-sm font-kids uppercase tracking-wider">Nivel
+              Fácil</span>
+            <span
+              class="block text-white bg-emerald-400 rounded-full text-[9px] md:text-[11px] font-bold px-2 mt-0.5 shadow-inner">Tortuga</span>
           </div>
         </button>
 
         <!-- Nivel Normal -->
-        <button onclick="selectLevel('normal'); document.getElementById('section-game').scrollIntoView({behavior: 'smooth'})" class="group relative flex flex-col items-center">
-          <div class="w-32 h-32 md:w-44 md:h-44 rounded-full border-[6px] md:border-8 border-white bg-sky-400 shadow-[0_10px_20px_rgba(0,0,0,0.3)] flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-4">
+        <button
+          onclick="selectLevel('normal'); document.getElementById('section-game').scrollIntoView({behavior: 'smooth'})"
+          class="group relative flex flex-col items-center">
+          <div
+            class="w-32 h-32 md:w-44 md:h-44 rounded-full border-[6px] md:border-8 border-white bg-sky-400 shadow-[0_10px_20px_rgba(0,0,0,0.3)] flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-4">
             <img src="img/rabbit.png" alt="Conejo" class="w-full h-full object-cover group-hover:animate-wobble">
           </div>
-          <div class="absolute -bottom-4 md:-bottom-6 bg-white border-4 border-sky-400 rounded-full px-4 py-1.5 text-center shadow-lg z-10">
-            <span class="block text-sky-600 font-extrabold text-[11px] md:text-sm font-kids uppercase tracking-wider">Nivel Normal</span>
-            <span class="block text-white bg-sky-400 rounded-full text-[10px] md:text-[12px] font-bold px-2 mt-0.5 shadow-inner">Conejo</span>
+          <div
+            class="absolute -bottom-4 md:-bottom-6 bg-white border-4 border-sky-400 rounded-full px-4 py-1.5 text-center shadow-lg z-10">
+            <span
+              class="block text-sky-600 font-extrabold text-[11px] md:text-sm font-kids uppercase tracking-wider">Nivel
+              Normal</span>
+            <span
+              class="block text-white bg-sky-400 rounded-full text-[10px] md:text-[12px] font-bold px-2 mt-0.5 shadow-inner">Conejo</span>
           </div>
         </button>
 
         <!-- Nivel Difícil -->
-        <button onclick="selectLevel('hard'); document.getElementById('section-game').scrollIntoView({behavior: 'smooth'})" class="group relative flex flex-col items-center">
-          <div class="w-32 h-32 md:w-44 md:h-44 rounded-full border-[6px] md:border-8 border-white bg-rose-400 shadow-[0_10px_20px_rgba(0,0,0,0.3)] flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-4">
+        <button
+          onclick="selectLevel('hard'); document.getElementById('section-game').scrollIntoView({behavior: 'smooth'})"
+          class="group relative flex flex-col items-center">
+          <div
+            class="w-32 h-32 md:w-44 md:h-44 rounded-full border-[6px] md:border-8 border-white bg-rose-400 shadow-[0_10px_20px_rgba(0,0,0,0.3)] flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-4">
             <img src="img/eagle.png" alt="Águila" class="w-full h-full object-cover group-hover:animate-wobble">
           </div>
-          <div class="absolute -bottom-4 md:-bottom-6 bg-white border-4 border-rose-400 rounded-full px-4 py-1 text-center shadow-lg">
-            <span class="block text-rose-600 font-extrabold text-[11px] md:text-sm font-kids uppercase tracking-wider">Nivel Difícil</span>
-            <span class="block text-white bg-rose-400 rounded-full text-[9px] md:text-[11px] font-bold px-2 mt-0.5 shadow-inner">Águila</span>
+          <div
+            class="absolute -bottom-4 md:-bottom-6 bg-white border-4 border-rose-400 rounded-full px-4 py-1 text-center shadow-lg">
+            <span
+              class="block text-rose-600 font-extrabold text-[11px] md:text-sm font-kids uppercase tracking-wider">Nivel
+              Difícil</span>
+            <span
+              class="block text-white bg-rose-400 rounded-full text-[9px] md:text-[11px] font-bold px-2 mt-0.5 shadow-inner">Águila</span>
           </div>
         </button>
 
@@ -101,20 +132,23 @@
 
     <!-- ======================= MODO JUEGO (SIMULADOR) ======================= -->
     <section id="section-game" class="transition-all-300 hidden">
-      
+
       <!-- Contenedor del Juego -->
       <div class="max-w-3xl mx-auto bg-white rounded-3xl game-card overflow-hidden transition-all-300">
 
-        
+
         <!-- Barra de progreso e información del nivel -->
-        <div id="game-header-bar" class="bg-gradient-to-r from-emerald-400 to-teal-500 text-white p-4 flex justify-between items-center px-6">
+        <div id="game-header-bar"
+          class="bg-gradient-to-r from-emerald-400 to-teal-500 text-white p-4 flex justify-between items-center px-6">
           <div class="flex items-center gap-2">
             <span id="game-mascot" class="text-2xl">🐢</span>
             <span id="game-level-title" class="font-kids tracking-wide text-lg">Nivel Fácil</span>
           </div>
           <div class="flex items-center gap-3">
-            <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-bold" id="game-text-indicator">Texto: El perro y la pelota</span>
-            <span class="bg-amber-400 text-slate-900 font-bold px-3 py-1 rounded-full text-xs shadow-sm flex items-center gap-1">
+            <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-bold" id="game-text-indicator">Texto: El perro
+              y la pelota</span>
+            <span
+              class="bg-amber-400 text-slate-900 font-bold px-3 py-1 rounded-full text-xs shadow-sm flex items-center gap-1">
               ⭐ <span id="star-count">0</span>
             </span>
           </div>
@@ -122,18 +156,20 @@
 
         <!-- Cuerpo del Juego (Pantallas dinámicas) -->
         <div class="p-6 md:p-8 min-h-[420px] flex flex-col justify-between" id="game-stage-container">
-          
+
           <!-- PANTALLA 1: Selección de Nivel -->
           <div id="stage-setup" class="space-y-6 block">
             <div class="text-center py-4">
               <h2 class="text-2xl font-kids text-slate-700">¡Hola, Aventurero! 👋</h2>
-              <p class="text-slate-500 mt-1 text-sm md:text-base">Elige un nivel para comenzar tu misión de lectura y juego de palabras.</p>
+              <p class="text-slate-500 mt-1 text-sm md:text-base">Elige un nivel para comenzar tu misión de lectura y
+                juego de palabras.</p>
             </div>
 
             <!-- Cartas de Selección de Nivel -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
               <!-- Fácil -->
-              <button onclick="selectLevel('easy')" class="group p-5 bg-emerald-50 hover:bg-emerald-100/80 border-2 border-emerald-200 hover:border-emerald-400 rounded-2xl text-left transition-all-300 shadow-sm hover:shadow-md">
+              <button onclick="selectLevel('easy')"
+                class="group p-5 bg-emerald-50 hover:bg-emerald-100/80 border-2 border-emerald-200 hover:border-emerald-400 rounded-2xl text-left transition-all-300 shadow-sm hover:shadow-md">
                 <div class="flex justify-between items-center mb-2">
                   <span class="text-3xl">🐢</span>
                   <span class="bg-emerald-200 text-emerald-800 font-bold text-xs px-2.5 py-1 rounded-full">FÁCIL</span>
@@ -143,7 +179,8 @@
               </button>
 
               <!-- Normal -->
-              <button onclick="selectLevel('normal')" class="group p-5 bg-sky-50 hover:bg-sky-100/80 border-2 border-sky-200 hover:border-sky-400 rounded-2xl text-left transition-all-300 shadow-sm hover:shadow-md">
+              <button onclick="selectLevel('normal')"
+                class="group p-5 bg-sky-50 hover:bg-sky-100/80 border-2 border-sky-200 hover:border-sky-400 rounded-2xl text-left transition-all-300 shadow-sm hover:shadow-md">
                 <div class="flex justify-between items-center mb-2">
                   <span class="text-3xl">🐇</span>
                   <span class="bg-sky-200 text-sky-800 font-bold text-xs px-2.5 py-1 rounded-full">NORMAL</span>
@@ -153,7 +190,8 @@
               </button>
 
               <!-- Difícil -->
-              <button onclick="selectLevel('hard')" class="group p-5 bg-rose-50 hover:bg-rose-100/80 border-2 border-rose-200 hover:border-rose-400 rounded-2xl text-left transition-all-300 shadow-sm hover:shadow-md">
+              <button onclick="selectLevel('hard')"
+                class="group p-5 bg-rose-50 hover:bg-rose-100/80 border-2 border-rose-200 hover:border-rose-400 rounded-2xl text-left transition-all-300 shadow-sm hover:shadow-md">
                 <div class="flex justify-between items-center mb-2">
                   <span class="text-3xl">🦅</span>
                   <span class="bg-rose-200 text-rose-800 font-bold text-xs px-2.5 py-1 rounded-full">DIFÍCIL</span>
@@ -169,7 +207,8 @@
               <div>
                 <h4 class="font-bold text-sm text-amber-900">¿Cuál es el secreto?</h4>
                 <p class="text-xs text-amber-800 leading-relaxed mt-1">
-                  Muchos leen rápido pero no recuerdan lo que leyeron. El secreto es leer con atención, comprender la historia y ¡prepararse para ordenar las letras misteriosas!
+                  Muchos leen rápido pero no recuerdan lo que leyeron. El secreto es leer con atención, comprender la
+                  historia y ¡prepararse para ordenar las letras misteriosas!
                 </p>
               </div>
             </div>
@@ -184,24 +223,29 @@
                 <span class="text-emerald-600">¡Lee con calma y atención!</span>
               </div>
               <div class="w-full h-3.5 bg-slate-100 rounded-full overflow-hidden border border-slate-200">
-                <div id="timer-progress-bar" class="h-full bg-gradient-to-r from-teal-400 to-emerald-500 transition-all duration-1000" style="width: 100%"></div>
+                <div id="timer-progress-bar"
+                  class="h-full bg-gradient-to-r from-teal-400 to-emerald-500 transition-all duration-1000"
+                  style="width: 100%"></div>
               </div>
             </div>
 
             <!-- Texto de lectura principal -->
             <div class="bg-amber-50/50 border-4 border-amber-100 p-6 md:p-8 rounded-3xl shadow-sm relative">
-              <span class="absolute -top-3 left-6 bg-amber-400 text-amber-950 px-4 py-0.5 rounded-full text-xs font-bold font-kids">
+              <span
+                class="absolute -top-3 left-6 bg-amber-400 text-amber-950 px-4 py-0.5 rounded-full text-xs font-bold font-kids">
                 ¡Misión Lectora! 📖
               </span>
               <h3 id="reading-title" class="font-kids text-xl text-slate-800 mb-3 text-center">Título del Cuento</h3>
-              <p id="reading-body" class="text-base md:text-lg text-slate-700 leading-relaxed text-justify first-letter:text-3xl first-letter:font-kids first-letter:text-teal-600">
+              <p id="reading-body"
+                class="text-base md:text-lg text-slate-700 leading-relaxed text-justify first-letter:text-3xl first-letter:font-kids first-letter:text-teal-600">
                 Texto del cuento aquí...
               </p>
             </div>
 
             <!-- Botón listo antes de tiempo -->
             <div class="flex justify-center">
-              <button onclick="finishReadingEarly()" class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-kids text-lg px-8 py-3.5 rounded-2xl hover:scale-105 active:scale-95 shadow-md transition-all-300">
+              <button onclick="finishReadingEarly()"
+                class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-kids text-lg px-8 py-3.5 rounded-2xl hover:scale-105 active:scale-95 shadow-md transition-all-300">
                 ✨ ¡Ya terminé de leer! ✨
               </button>
             </div>
@@ -219,8 +263,9 @@
             </div>
 
             <div class="space-y-4">
-              <h3 id="quiz-question" class="text-lg md:text-xl font-bold text-slate-800">¿Qué hace el perro Tobi en el jardín?</h3>
-              
+              <h3 id="quiz-question" class="text-lg md:text-xl font-bold text-slate-800">¿Qué hace el perro Tobi en el
+                jardín?</h3>
+
               <!-- Opciones de Respuesta -->
               <div id="quiz-options-container" class="grid grid-cols-1 gap-3">
                 <!-- Se generan dinámicamente -->
@@ -233,7 +278,8 @@
                 <span class="text-2xl float-animation">💡</span>
                 <div>
                   <h4 class="font-bold text-xs text-yellow-900">Pista del Sabio:</h4>
-                  <p id="quiz-hint-text" class="text-xs text-yellow-800 font-semibold mt-0.5 leading-relaxed">¿Recuerdas la primera oración? Qué mascota se menciona...</p>
+                  <p id="quiz-hint-text" class="text-xs text-yellow-800 font-semibold mt-0.5 leading-relaxed">¿Recuerdas
+                    la primera oración? Qué mascota se menciona...</p>
                 </div>
               </div>
             </div>
@@ -242,17 +288,20 @@
           <!-- PANTALLA 4: ¡Arma Palabras! (Módulo Interactivo) -->
           <div id="stage-wordbuilder" class="space-y-6 hidden">
             <div class="text-center">
-              <span class="bg-violet-100 text-violet-700 font-kids text-xs px-4 py-1 rounded-full uppercase tracking-wider">
+              <span
+                class="bg-violet-100 text-violet-700 font-kids text-xs px-4 py-1 rounded-full uppercase tracking-wider">
                 🧩 ¡NUEVO RETO DIVERTIDO!
               </span>
               <h3 class="font-kids text-2xl text-violet-800 mt-2">¡Arma la Palabra Secreta!</h3>
-              <p class="text-xs text-slate-500 mt-1">Ordena las letras para formar la palabra que apareció en el cuento.</p>
+              <p class="text-xs text-slate-500 mt-1">Ordena las letras para formar la palabra que apareció en el cuento.
+              </p>
             </div>
 
             <!-- Pista de la Palabra -->
             <div class="bg-violet-50 border-2 border-violet-100 rounded-2xl p-3 text-center max-w-md mx-auto">
               <p class="text-xs text-slate-500 font-bold uppercase tracking-wider">Pista de la Palabra:</p>
-              <p id="wordbuilder-hint" class="text-sm font-semibold text-violet-900 mt-0.5">"El juguete favorito de Tobi que cayó al río"</p>
+              <p id="wordbuilder-hint" class="text-sm font-semibold text-violet-900 mt-0.5">"El juguete favorito de Tobi
+                que cayó al río"</p>
             </div>
 
             <!-- Letras vacías de destino (La palabra que se va formando) -->
@@ -261,16 +310,19 @@
             </div>
 
             <!-- Letras mezcladas de origen (Tappables) -->
-            <div class="flex flex-wrap justify-center gap-3 py-2 bg-slate-50 p-4 rounded-3xl border border-dashed" id="wordbuilder-pool">
+            <div class="flex flex-wrap justify-center gap-3 py-2 bg-slate-50 p-4 rounded-3xl border border-dashed"
+              id="wordbuilder-pool">
               <!-- Letras mezcladas listas para cliquear -->
             </div>
 
             <!-- Botones de Control de Armado -->
             <div class="flex justify-center gap-3">
-              <button onclick="resetWordBuilder()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold text-sm px-5 py-2.5 rounded-xl transition-all-300">
+              <button onclick="resetWordBuilder()"
+                class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold text-sm px-5 py-2.5 rounded-xl transition-all-300">
                 🧹 Reiniciar Letras
               </button>
-              <button onclick="checkWordBuilderSolution()" class="bg-gradient-to-r from-violet-500 to-purple-600 text-white font-kids text-base px-8 py-2.5 rounded-xl hover:scale-105 active:scale-95 shadow-md transition-all-300">
+              <button onclick="checkWordBuilderSolution()"
+                class="bg-gradient-to-r from-violet-500 to-purple-600 text-white font-kids text-base px-8 py-2.5 rounded-xl hover:scale-105 active:scale-95 shadow-md transition-all-300">
                 🚀 ¡Revisar Palabra!
               </button>
             </div>
@@ -281,12 +333,15 @@
             <div class="text-center">
               <span class="text-4xl">✍️</span>
               <h3 class="font-kids text-2xl text-slate-800 mt-2">¡Casi terminamos, Escritor!</h3>
-              <p class="text-xs text-slate-500 mt-1">Escribe una oración explicando con tus propias palabras lo que aprendiste de la historia.</p>
+              <p class="text-xs text-slate-500 mt-1">Escribe una oración explicando con tus propias palabras lo que
+                aprendiste de la historia.</p>
             </div>
 
             <div class="space-y-2">
               <label class="text-xs font-bold text-slate-600">Tu respuesta libre (Mínimo 15 letras):</label>
-              <textarea id="reflection-textarea" oninput="validateReflection()" placeholder="Ejemplo: El cuento trata sobre el perro Tobi que recuperó su pelota roja gracias a su dueño..." class="w-full border-2 border-slate-200 focus:border-cyan-400 focus:bg-white bg-slate-50 rounded-2xl p-4 text-sm font-semibold transition-all-300 min-h-[110px] resize-none"></textarea>
+              <textarea id="reflection-textarea" oninput="validateReflection()"
+                placeholder="Ejemplo: El cuento trata sobre el perro Tobi que recuperó su pelota roja gracias a su dueño..."
+                class="w-full border-2 border-slate-200 focus:border-cyan-400 focus:bg-white bg-slate-50 rounded-2xl p-4 text-sm font-semibold transition-all-300 min-h-[110px] resize-none"></textarea>
               <div class="flex justify-between items-center text-xs">
                 <span id="reflection-char-count" class="text-slate-400 font-semibold">0 / 15 caracteres mínimos</span>
                 <span class="text-cyan-600 font-bold">¡Esta es tu verdadera señal de comprensión! 🌟</span>
@@ -294,7 +349,8 @@
             </div>
 
             <div class="flex justify-center">
-              <button id="btn-submit-reflection" disabled onclick="submitReflection()" class="bg-slate-300 text-slate-500 font-kids text-lg px-10 py-3.5 rounded-2xl cursor-not-allowed transition-all-300">
+              <button id="btn-submit-reflection" disabled onclick="submitReflection()"
+                class="bg-slate-300 text-slate-500 font-kids text-lg px-10 py-3.5 rounded-2xl cursor-not-allowed transition-all-300">
                 🏁 ¡Finalizar Aventura!
               </button>
             </div>
@@ -305,7 +361,8 @@
             <div>
               <div id="result-emoji" class="text-6xl float-animation">😄</div>
               <h3 id="result-title" class="font-kids text-2xl text-slate-800 mt-3">¡Excelente Trabajo!</h3>
-              <p id="result-subtitle" class="text-slate-500 text-xs md:text-sm">Has demostrado una gran atención al comprender el texto.</p>
+              <p id="result-subtitle" class="text-slate-500 text-xs md:text-sm">Has demostrado una gran atención al
+                comprender el texto.</p>
             </div>
 
             <!-- Estadísticas en tarjeta -->
@@ -327,15 +384,18 @@
             <!-- Resumen de Reflexión Escrita -->
             <div class="bg-amber-50/50 border border-amber-100 rounded-2xl p-3 max-w-md mx-auto text-left">
               <span class="text-[10px] font-bold text-amber-800 uppercase block mb-1">Tu diario de reflexión:</span>
-              <p id="result-reflection-text" class="text-xs text-slate-600 italic font-semibold leading-relaxed">"..."</p>
+              <p id="result-reflection-text" class="text-xs text-slate-600 italic font-semibold leading-relaxed">"..."
+              </p>
             </div>
 
             <!-- Botones de Acción final -->
             <div class="flex flex-col sm:flex-row gap-3 justify-center pt-2">
-              <button onclick="retryCurrentLevel()" class="bg-amber-400 hover:bg-amber-500 text-slate-900 font-kids text-sm px-6 py-3 rounded-xl transition-all-300 shadow-md">
+              <button onclick="retryCurrentLevel()"
+                class="bg-amber-400 hover:bg-amber-500 text-slate-900 font-kids text-sm px-6 py-3 rounded-xl transition-all-300 shadow-md">
                 🔄 Jugar de Nuevo
               </button>
-              <button onclick="resetToSetup()" class="bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-kids text-sm px-6 py-3 rounded-xl transition-all-300 shadow-md">
+              <button onclick="resetToSetup()"
+                class="bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-kids text-sm px-6 py-3 rounded-xl transition-all-300 shadow-md">
                 🗺️ Elegir Otro Nivel
               </button>
             </div>
@@ -347,7 +407,7 @@
 
     <!-- ======================= MODO FICHA PEDAGÓGICA (DOCENTES) ======================= -->
     <section id="section-ficha" class="transition-all-300 hidden no-print max-w-5xl mx-auto space-y-6">
-      
+
       <!-- Panel de Instrucciones Pedagógicas de la IA -->
       <div class="bg-blue-50 border-2 border-blue-200 rounded-2xl p-5 flex flex-col md:flex-row items-center gap-4">
         <div class="bg-blue-500 text-white p-3.5 rounded-full text-2xl shadow-inner">
@@ -356,14 +416,18 @@
         <div class="text-center md:text-left">
           <h2 class="font-kids text-lg text-blue-950">¡Cerebro Pedagógico Sincronizado!</h2>
           <p class="text-xs text-blue-800 leading-relaxed mt-0.5">
-            ¡Modifica la ficha! Todo lo que edites aquí —textos, preguntas, respuestas, pistas e incluso la palabra del minijuego— se cargará inmediatamente al presionar el botón <b>"Sincronizar con el Juego"</b>. ¡Diseño didáctico dinámico en vivo!
+            ¡Modifica la ficha! Todo lo que edites aquí —textos, preguntas, respuestas, pistas e incluso la palabra del
+            minijuego— se cargará inmediatamente al presionar el botón <b>"Sincronizar con el Juego"</b>. ¡Diseño
+            didáctico dinámico en vivo!
           </p>
         </div>
         <div class="flex gap-2 shrink-0">
-          <button onclick="syncFichaToGame()" class="bg-emerald-500 hover:bg-emerald-600 text-white font-kids text-sm px-4 py-2.5 rounded-xl shadow-md transition-all-300">
+          <button onclick="syncFichaToGame()"
+            class="bg-emerald-500 hover:bg-emerald-600 text-white font-kids text-sm px-4 py-2.5 rounded-xl shadow-md transition-all-300">
             🔄 Sincronizar
           </button>
-          <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 text-white font-kids text-sm px-4 py-2.5 rounded-xl shadow-md transition-all-300">
+          <button onclick="window.print()"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-kids text-sm px-4 py-2.5 rounded-xl shadow-md transition-all-300">
             🖨️ PDF
           </button>
         </div>
@@ -371,13 +435,15 @@
 
       <!-- DATOS DEL GRUPO -->
       <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
-        <div class="bg-slate-800 text-slate-100 px-4 py-2 rounded-xl text-xs font-bold tracking-wide uppercase mb-4 flex items-center gap-2">
+        <div
+          class="bg-slate-800 text-slate-100 px-4 py-2 rounded-xl text-xs font-bold tracking-wide uppercase mb-4 flex items-center gap-2">
           <span>👥</span> Datos del Grupo Investigador
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
           <div>
             <label class="block text-xs font-bold text-slate-500 mb-1">Nombre del Grupo / Ficha</label>
-            <input type="text" id="teacher-group-name" value="G6" class="w-full border rounded-lg p-2 text-xs font-semibold bg-slate-50">
+            <input type="text" id="teacher-group-name" value="G6"
+              class="w-full border rounded-lg p-2 text-xs font-semibold bg-slate-50">
           </div>
           <div>
             <label class="block text-xs font-bold text-slate-500 mb-1">Fecha de Sesión</label>
@@ -387,61 +453,74 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
           <div>
             <label class="block text-xs font-bold text-slate-500 mb-1">Docente 1</label>
-            <input type="text" placeholder="Nombre completo" class="w-full border rounded-lg p-2 text-xs font-semibold bg-slate-50">
+            <input type="text" placeholder="Nombre completo"
+              class="w-full border rounded-lg p-2 text-xs font-semibold bg-slate-50">
           </div>
           <div>
             <label class="block text-xs font-bold text-slate-500 mb-1">Docente 2</label>
-            <input type="text" placeholder="Nombre completo" class="w-full border rounded-lg p-2 text-xs font-semibold bg-slate-50">
+            <input type="text" placeholder="Nombre completo"
+              class="w-full border rounded-lg p-2 text-xs font-semibold bg-slate-50">
           </div>
           <div>
             <label class="block text-xs font-bold text-slate-500 mb-1">Docente 3</label>
-            <input type="text" placeholder="Nombre completo" class="w-full border rounded-lg p-2 text-xs font-semibold bg-slate-50">
+            <input type="text" placeholder="Nombre completo"
+              class="w-full border rounded-lg p-2 text-xs font-semibold bg-slate-50">
           </div>
           <div>
             <label class="block text-xs font-bold text-slate-500 mb-1">Docente 4</label>
-            <input type="text" placeholder="Nombre completo" class="w-full border rounded-lg p-2 text-xs font-semibold bg-slate-50">
+            <input type="text" placeholder="Nombre completo"
+              class="w-full border rounded-lg p-2 text-xs font-semibold bg-slate-50">
           </div>
         </div>
       </div>
 
       <!-- PARTE 1: PROBLEMA PEDAGÓGICO REAL -->
       <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
-        <div class="bg-slate-800 text-slate-100 px-4 py-2 rounded-xl text-xs font-bold tracking-wide uppercase mb-4 flex items-center gap-2">
+        <div
+          class="bg-slate-800 text-slate-100 px-4 py-2 rounded-xl text-xs font-bold tracking-wide uppercase mb-4 flex items-center gap-2">
           <span>📌</span> PARTE 1 — Diagnóstico y Modelo Mental Erróneo
         </div>
-        
+
         <div class="space-y-4">
           <div>
             <label class="block text-xs font-bold text-slate-500 mb-1">1. El error concreto del estudiante</label>
-            <textarea class="w-full border rounded-xl p-3 text-xs font-medium leading-relaxed bg-amber-50/50 min-h-[80px]">El estudiante cree que leer en voz alta sin equivocarse equivale a comprender el texto. Lee el párrafo completo pero al terminar no puede decir de qué trató ni identificar la idea principal. Modelo mental incorrecto: "leer = pronunciar las palabras en orden correcto sin entender."</textarea>
+            <textarea
+              class="w-full border rounded-xl p-3 text-xs font-medium leading-relaxed bg-amber-50/50 min-h-[80px]">El estudiante cree que leer en voz alta sin equivocarse equivale a comprender el texto. Lee el párrafo completo pero al terminar no puede decir de qué trató ni identificar la idea principal. Modelo mental incorrecto: "leer = pronunciar las palabras en orden correcto sin entender."</textarea>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label class="block text-xs font-bold text-slate-500 mb-1">2. Asignatura / Área Curricular</label>
-              <input type="text" value="Español / Lengua y Literatura" class="w-full border rounded-xl p-2.5 text-xs font-semibold bg-amber-50/50">
+              <input type="text" value="Español / Lengua y Literatura"
+                class="w-full border rounded-xl p-2.5 text-xs font-semibold bg-amber-50/50">
             </div>
             <div>
               <label class="block text-xs font-bold text-slate-500 mb-1">Grado / Nivel Etario</label>
-              <input type="text" value="3.er Grado de Primaria (8–9 años)" class="w-full border rounded-xl p-2.5 text-xs font-semibold bg-amber-50/50">
+              <input type="text" value="3.er Grado de Primaria (8–9 años)"
+                class="w-full border rounded-xl p-2.5 text-xs font-semibold bg-amber-50/50">
             </div>
           </div>
           <div>
-            <label class="block text-xs font-bold text-slate-500 mb-1">3. ¿Por qué una explicación verbal tradicional no es suficiente?</label>
-            <textarea class="w-full border rounded-xl p-3 text-xs font-medium leading-relaxed bg-amber-50/50 min-h-[70px]">El estudiante necesita experimentar empíricamente la diferencia entre pronunciar y procesar. Necesita leer un texto divertido y confrontarse de inmediato con el juego interactivo para darse cuenta de si realmente asimiló la información.</textarea>
+            <label class="block text-xs font-bold text-slate-500 mb-1">3. ¿Por qué una explicación verbal tradicional no
+              es suficiente?</label>
+            <textarea
+              class="w-full border rounded-xl p-3 text-xs font-medium leading-relaxed bg-amber-50/50 min-h-[70px]">El estudiante necesita experimentar empíricamente la diferencia entre pronunciar y procesar. Necesita leer un texto divertido y confrontarse de inmediato con el juego interactivo para darse cuenta de si realmente asimiló la información.</textarea>
           </div>
         </div>
       </div>
 
       <!-- PARTE 2: DISEÑO DEL RECURSO INTERACTIVO -->
       <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
-        <div class="bg-emerald-800 text-emerald-100 px-4 py-2 rounded-xl text-xs font-bold tracking-wide uppercase mb-4 flex items-center gap-2">
+        <div
+          class="bg-emerald-800 text-emerald-100 px-4 py-2 rounded-xl text-xs font-bold tracking-wide uppercase mb-4 flex items-center gap-2">
           <span>🛠️</span> PARTE 2 — Diseño Mecánico e Interactivo del Recurso
         </div>
 
         <div class="space-y-4">
           <div>
-            <label class="block text-xs font-bold text-slate-500 mb-1">4. ¿Qué HACE el recurso interactivo? — Parámetros modificados</label>
-            <textarea class="w-full border rounded-xl p-3 text-xs font-medium leading-relaxed bg-amber-50/50 min-h-[90px]">• El estudiante elige entre 3 niveles de velocidad de lectura (Fácil 🐢 / Normal 🐇 / Difícil 🦅).
+            <label class="block text-xs font-bold text-slate-500 mb-1">4. ¿Qué HACE el recurso interactivo? — Parámetros
+              modificados</label>
+            <textarea
+              class="w-full border rounded-xl p-3 text-xs font-medium leading-relaxed bg-amber-50/50 min-h-[90px]">• El estudiante elige entre 3 niveles de velocidad de lectura (Fácil 🐢 / Normal 🐇 / Difícil 🦅).
 • Cada nivel presenta cuentos aleatorios para desafiar la memoria.
 • Un temporizador visual con barra interactiva mide el progreso de lectura activa.
 • Un módulo de preguntas aleatorias evalúa la retención con pistas en forma de interrogante.
@@ -449,22 +528,28 @@
 • Retroalimentación con caritas emocionales, estrellas y resumen de avances.</textarea>
           </div>
           <div>
-            <label class="block text-xs font-bold text-slate-500 mb-1">5. La pista mínima viable (si el estudiante comete un error)</label>
-            <textarea class="w-full border rounded-xl p-3 text-xs font-medium leading-relaxed bg-amber-50/50 min-h-[60px]">Una pista en forma de pregunta de andamiaje cognitivo específica que guía la atención del niño a una parte del texto, evitando darle la respuesta correcta de inmediato.</textarea>
+            <label class="block text-xs font-bold text-slate-500 mb-1">5. La pista mínima viable (si el estudiante
+              comete un error)</label>
+            <textarea
+              class="w-full border rounded-xl p-3 text-xs font-medium leading-relaxed bg-amber-50/50 min-h-[60px]">Una pista en forma de pregunta de andamiaje cognitivo específica que guía la atención del niño a una parte del texto, evitando darle la respuesta correcta de inmediato.</textarea>
           </div>
           <div>
-            <label class="block text-xs font-bold text-slate-500 mb-1">6. Señal inequívoca de logro de comprensión</label>
-            <textarea class="w-full border rounded-xl p-3 text-xs font-medium leading-relaxed bg-amber-50/50 min-h-[60px]">Responder con éxito la palabra secreta magnética en "Armar Palabras", contestar al menos 2 preguntas de comprensión de forma independiente y escribir una oración coherente en la bitácora final.</textarea>
+            <label class="block text-xs font-bold text-slate-500 mb-1">6. Señal inequívoca de logro de
+              comprensión</label>
+            <textarea
+              class="w-full border rounded-xl p-3 text-xs font-medium leading-relaxed bg-amber-50/50 min-h-[60px]">Responder con éxito la palabra secreta magnética en "Armar Palabras", contestar al menos 2 preguntas de comprensión de forma independiente y escribir una oración coherente en la bitácora final.</textarea>
           </div>
         </div>
       </div>
 
       <!-- BANCO DE CONTENIDOS EDITABLE Y SINCRONIZADO -->
       <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
-        <div class="bg-teal-800 text-teal-100 px-4 py-2 rounded-xl text-xs font-bold tracking-wide uppercase mb-2 flex items-center gap-2">
+        <div
+          class="bg-teal-800 text-teal-100 px-4 py-2 rounded-xl text-xs font-bold tracking-wide uppercase mb-2 flex items-center gap-2">
           <span>📚</span> Banco de Cuentos, Preguntas y Palabras del Juego (¡Editable!)
         </div>
-        <p class="text-xs text-slate-400 mb-4">Los cambios que realices en estas tarjetas se aplicarán al simulador de juego interactivo.</p>
+        <p class="text-xs text-slate-400 mb-4">Los cambios que realices en estas tarjetas se aplicarán al simulador de
+          juego interactivo.</p>
 
         <div class="space-y-6" id="editor-texts-container">
           <!-- Se cargan dinámicamente desde el JS para que se puedan editar y sincronizar perfectamente -->
@@ -473,26 +558,39 @@
 
       <!-- PARTE 3: LISTA DE VERIFICACIÓN PEDAGÓGICA -->
       <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
-        <div class="bg-amber-600 text-amber-50 px-4 py-2 rounded-xl text-xs font-bold tracking-wide uppercase mb-4 flex items-center gap-2">
+        <div
+          class="bg-amber-600 text-amber-50 px-4 py-2 rounded-xl text-xs font-bold tracking-wide uppercase mb-4 flex items-center gap-2">
           <span>✅</span> PARTE 3 — Autoevaluación del Codiseño
         </div>
-        
+
         <ul class="space-y-2" id="checklist">
-          <li onclick="toggleCheckItem(this)" class="flex items-start gap-3 p-3 bg-slate-50 hover:bg-emerald-50 border rounded-xl cursor-pointer transition-all-300">
-            <input type="checkbox" checked class="mt-1 accent-emerald-500" onclick="event.stopPropagation(); toggleCheckItem(this.parentElement)">
-            <span class="text-xs font-semibold text-slate-700">Describimos el error cognitivo basándonos en el <b>modelo mental</b> del niño, no solo en "no sabe hacer X".</span>
+          <li onclick="toggleCheckItem(this)"
+            class="flex items-start gap-3 p-3 bg-slate-50 hover:bg-emerald-50 border rounded-xl cursor-pointer transition-all-300">
+            <input type="checkbox" checked class="mt-1 accent-emerald-500"
+              onclick="event.stopPropagation(); toggleCheckItem(this.parentElement)">
+            <span class="text-xs font-semibold text-slate-700">Describimos el error cognitivo basándonos en el <b>modelo
+                mental</b> del niño, no solo en "no sabe hacer X".</span>
           </li>
-          <li onclick="toggleCheckItem(this)" class="flex items-start gap-3 p-3 bg-slate-50 hover:bg-emerald-50 border rounded-xl cursor-pointer transition-all-300">
-            <input type="checkbox" checked class="mt-1 accent-emerald-500" onclick="event.stopPropagation(); toggleCheckItem(this.parentElement)">
-            <span class="text-xs font-semibold text-slate-700">La pista de error es una <b>pregunta de andamiaje</b> y nunca la respuesta regalada.</span>
+          <li onclick="toggleCheckItem(this)"
+            class="flex items-start gap-3 p-3 bg-slate-50 hover:bg-emerald-50 border rounded-xl cursor-pointer transition-all-300">
+            <input type="checkbox" checked class="mt-1 accent-emerald-500"
+              onclick="event.stopPropagation(); toggleCheckItem(this.parentElement)">
+            <span class="text-xs font-semibold text-slate-700">La pista de error es una <b>pregunta de andamiaje</b> y
+              nunca la respuesta regalada.</span>
           </li>
-          <li onclick="toggleCheckItem(this)" class="flex items-start gap-3 p-3 bg-slate-50 hover:bg-emerald-50 border rounded-xl cursor-pointer transition-all-300">
-            <input type="checkbox" checked class="mt-1 accent-emerald-500" onclick="event.stopPropagation(); toggleCheckItem(this.parentElement)">
-            <span class="text-xs font-semibold text-slate-700">Integramos el minijuego dinámico de <b>"Armar Palabras"</b> para interactuar físicamente con la estructura de la palabra clave.</span>
+          <li onclick="toggleCheckItem(this)"
+            class="flex items-start gap-3 p-3 bg-slate-50 hover:bg-emerald-50 border rounded-xl cursor-pointer transition-all-300">
+            <input type="checkbox" checked class="mt-1 accent-emerald-500"
+              onclick="event.stopPropagation(); toggleCheckItem(this.parentElement)">
+            <span class="text-xs font-semibold text-slate-700">Integramos el minijuego dinámico de <b>"Armar
+                Palabras"</b> para interactuar físicamente con la estructura de la palabra clave.</span>
           </li>
-          <li onclick="toggleCheckItem(this)" class="flex items-start gap-3 p-3 bg-slate-50 hover:bg-emerald-50 border rounded-xl cursor-pointer transition-all-300">
-            <input type="checkbox" checked class="mt-1 accent-emerald-500" onclick="event.stopPropagation(); toggleCheckItem(this.parentElement)">
-            <span class="text-xs font-semibold text-slate-700">El temporizador de lectura es configurable y se adapta a la diversidad de ritmos del salón.</span>
+          <li onclick="toggleCheckItem(this)"
+            class="flex items-start gap-3 p-3 bg-slate-50 hover:bg-emerald-50 border rounded-xl cursor-pointer transition-all-300">
+            <input type="checkbox" checked class="mt-1 accent-emerald-500"
+              onclick="event.stopPropagation(); toggleCheckItem(this.parentElement)">
+            <span class="text-xs font-semibold text-slate-700">El temporizador de lectura es configurable y se adapta a
+              la diversidad de ritmos del salón.</span>
           </li>
         </ul>
         <div id="check-status" class="mt-4 text-xs font-bold text-emerald-600"></div>
@@ -500,21 +598,25 @@
 
       <!-- BITÁCORA DE DECISIONES -->
       <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
-        <div class="bg-violet-800 text-violet-100 px-4 py-2 rounded-xl text-xs font-bold tracking-wide uppercase mb-4 flex items-center gap-2">
+        <div
+          class="bg-violet-800 text-violet-100 px-4 py-2 rounded-xl text-xs font-bold tracking-wide uppercase mb-4 flex items-center gap-2">
           <span>📓</span> Bitácora Docente de Decisiones Vibecoding
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div class="p-4 bg-slate-50 rounded-xl border">
             <h4 class="text-xs font-bold text-violet-900 mb-1">Propuesta original de la IA</h4>
-            <textarea class="w-full bg-white border rounded p-2 text-xs min-h-[80px]" placeholder="Ej. El temporizador tradicional de texto estático."></textarea>
+            <textarea class="w-full bg-white border rounded p-2 text-xs min-h-[80px]"
+              placeholder="Ej. El temporizador tradicional de texto estático."></textarea>
           </div>
           <div class="p-4 bg-slate-50 rounded-xl border">
             <h4 class="text-xs font-bold text-violet-900 mb-1">Lo que reestructuramos por interactividad</h4>
-            <textarea class="w-full bg-white border rounded p-2 text-xs min-h-[80px]">Decidimos implementar un módulo lúdico de letras móviles llamado 'Armar Palabras', donde los niños manipulan las letras para verificar su memoria ortográfica y comprensión del concepto clave leído.</textarea>
+            <textarea
+              class="w-full bg-white border rounded p-2 text-xs min-h-[80px]">Decidimos implementar un módulo lúdico de letras móviles llamado 'Armar Palabras', donde los niños manipulan las letras para verificar su memoria ortográfica y comprensión del concepto clave leído.</textarea>
           </div>
           <div class="p-4 bg-slate-50 rounded-xl border">
             <h4 class="text-xs font-bold text-violet-900 mb-1">Valor didáctico observado</h4>
-            <textarea class="w-full bg-white border rounded p-2 text-xs min-h-[80px]" placeholder="Ej. El niño no se frustra al equivocarse en las preguntas porque tiene una segunda oportunidad de éxito manipulando las letras de la palabra secreta."></textarea>
+            <textarea class="w-full bg-white border rounded p-2 text-xs min-h-[80px]"
+              placeholder="Ej. El niño no se frustra al equivocarse en las preguntas porque tiene una segunda oportunidad de éxito manipulando las letras de la palabra secreta."></textarea>
           </div>
         </div>
       </div>
@@ -523,9 +625,11 @@
 
   </main>
 
+
   <!-- Vinculación de Scripts Modulares -->
   <script src="js/database.js"></script>
   <script src="js/audio.js"></script>
   <script src="js/app.js"></script>
 </body>
+
 </html>
